@@ -1,8 +1,12 @@
 import React from 'react';
+import { useMount } from 'ahooks';
 import { observer } from 'mobx-react-lite';
 import { useStore } from '@/stores';
 
 const Test = () => {
+  useMount(() => {
+    console.log('ahooks mount');
+  });
   let { counterStore } = useStore();
   const { onIncrement, onDecrement } = counterStore;
   return (
