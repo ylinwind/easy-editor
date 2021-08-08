@@ -12,6 +12,7 @@
     "strict": true,
     "paths": {
       "@/*": ["src/*"],
+      "@editorComponents/*": ["src/pages/editor/components/*"],
       "@tmp/*": ["src/pages/.umi/*"]
     },
     "allowSyntheticDefaultImports": true
