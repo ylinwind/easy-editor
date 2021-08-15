@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import classnames from 'classnames';
+import { useSize } from 'ahooks';
+import Canvas from './components/canvas';
+import styles from './index.less';
 
-const Canvas = () => {
+const CanvasWrapper = () => {
+  const ref = useRef(null);
+  const size = useSize(ref);
+  console.log(size, '==size===');
   return (
-    <div className="flex flex-1 text-white bg-gray-900 min-w-max">
-      main drawing
+    <div
+      className={classnames(
+        'flex flex-1 text-white bg-gray-900 min-w-max',
+        styles.wrapper,
+      )}
+      ref={ref}
+    >
+      <Canvas WrapperSize={size} />
     </div>
   );
 };
 
-export default Canvas;
+export default CanvasWrapper;
