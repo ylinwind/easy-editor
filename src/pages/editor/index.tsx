@@ -8,9 +8,9 @@ import Canvas from '@editorComponents/canvas';
 const Editor = () => {
   return (
     <div className={classnames(styles.wrapper, 'flex h-full')}>
-      <Settings />
-      <Canvas />
       <Widgets />
+      <Canvas />
+      <Settings />
     </div>
   );
 };

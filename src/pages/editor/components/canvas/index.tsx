@@ -7,7 +7,6 @@ import styles from './index.less';
 const CanvasWrapper = () => {
   const ref = useRef(null);
   const size = useSize(ref);
-  console.log(size, '==size===');
   return (
     <div
       className={classnames(

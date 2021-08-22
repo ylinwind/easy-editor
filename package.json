@@ -10,6 +10,7 @@
   "dependencies": {
     "@tailwindcss/postcss7-compat": "^2.2.7",
     "ahooks": "^2.10.9",
+    "antd": "^4.16.12",
     "autoprefixer": "^9",
     "eslint-plugin-security": "^1.4.0",
     "mobx": "^6.3.2",

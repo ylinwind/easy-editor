@@ -13,17 +13,16 @@ const Canvas = (props: CanvasProps) => {
     CanvasSize,
   ]);
 
+  const wrapperIsVertical = useCreation(
+    () => WrapperSize.height > WrapperSize.width,
+    [WrapperSize],
+  );
+
   const scale = useCreation(() => {
-    let ratio = 1;
-    if (isVertical) {
-      ratio = Number(
-        ((WrapperSize.width / CanvasSize.width) * showRatio).toFixed(2),
-      );
-    } else {
-      ratio = Number(
-        ((WrapperSize.width / CanvasSize.width) * showRatio).toFixed(2),
-      );
-    }
+    let ratio = Math.min(
+      Number(((WrapperSize.width / CanvasSize.width) * showRatio).toFixed(2)),
+      Number(((WrapperSize.height / CanvasSize.height) * showRatio).toFixed(2)),
+    );
     return ratio;
   }, [WrapperSize, CanvasSize]);
 
