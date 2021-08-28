@@ -9,15 +9,6 @@ const CanvasSize = { width: 400, height: 400 };
 const Canvas = (props: CanvasProps) => {
   const { WrapperSize, showRatio = 0.9 } = props;
 
-  const isVertical = useCreation(() => CanvasSize.height > CanvasSize.width, [
-    CanvasSize,
-  ]);
-
-  const wrapperIsVertical = useCreation(
-    () => WrapperSize.height > WrapperSize.width,
-    [WrapperSize],
-  );
-
   const scale = useCreation(() => {
     let ratio = Math.min(
       Number(((WrapperSize.width / CanvasSize.width) * showRatio).toFixed(2)),

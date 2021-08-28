@@ -17,6 +17,8 @@
     "mobx-react": "^7.2.0",
     "mobx-react-lite": "^3.2.0",
     "postcss-import": "^14.0.2",
+    "react-dnd": "^14.0.3",
+    "react-dnd-html5-backend": "^14.0.1",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   },
   "devDependencies": {

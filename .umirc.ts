@@ -10,7 +10,9 @@ const config: IConfig =  {
       component: '../layouts/index',
       routes: [
         { path: '/', component: '../pages/index' },
-        { path: '/editor', component: '../pages/editor/index' }
+        { path: '/editor', component: '../pages/editor/index' },
+        { path: '/dnd', component: '../pages/dnd/index' },
+        { path: '/a-dnd', component: '../pages/ahooks-dnd/index' }
       ]
     }
   ],
